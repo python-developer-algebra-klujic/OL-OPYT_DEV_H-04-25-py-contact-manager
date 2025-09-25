@@ -26,7 +26,7 @@ Svaka firma ima slijedeća svojstva:
 - id
 - name
 - vat_id
-- contacts
+- contacts - VAŽNO: contacts kolekcija ima samo podatke o id-u kontakt ne cijeli kontakt
 
 ### Funkcionalnosti
 
