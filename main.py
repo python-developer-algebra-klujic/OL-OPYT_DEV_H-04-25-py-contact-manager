@@ -1,4 +1,4 @@
-
+import os
 
 
 #region INITIAL DATA
@@ -53,12 +53,37 @@ customers = [
 
 
 #region FUNCTIONS
+
+
+#region GUI MODUL
+
+def clear_display() -> None:
+    os.system('cls')
+    print('clear_display() is working')
+
+#endregion
+
+#region CONTACTS MODUL
+
+#endregion
+
+#region CUSTOMERS MODUL
+
+#endregion
+
+
 def main():
-    print('Main function is working!')
+    # Ocisti ekran -> funkcija clear_display()
+    clear_display()
+    
+    # Prikazati izbornik -> funkcija main_menu()
+
+    # Ovisno o izboru meni_item pozvati odgovarajucu funkciju
 
 #endregion
 
 
 #region MAIN PROGRAM
-main()
+if __name__ == '__main__':
+    main()
 #endregion
