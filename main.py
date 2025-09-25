@@ -1,4 +1,5 @@
 import os
+from typing import Dict
 
 
 #region INITIAL DATA
@@ -67,27 +68,36 @@ def main_menu() -> int:
         clear_display()
 
         print('main_menu() is working.')
-        print('1. Test')
+        print('1. Display Customers')
+        print('2. Display Contacts')
         print('0. Exit')
 
         meni_item = input('Upisite broj ispred funkcionalnosti koju zelite napraviti: ')
 
-        if meni_item.isdigit():
+        if meni_item.isdigit(): # isdigit = True i za broj 123456 koejg nema u izborniku!!!
             return int(meni_item)
         else:
             print('Neispravan unos! Pokusajte ponovno.')
             input('Za novi izbor pritisnite tipku ENTER.')
 
-
-
-
 #endregion
 
 #region CONTACTS MODUL
 
+def contact_full_name(contact: Dict) -> str:
+    return f'{contact['first_name']} {contact['last_name']}'
+
+
+def display_contacts():
+    for contact in contacts:
+        print(f'{contact['id']}, {contact_full_name(contact)}')
+
 #endregion
 
 #region CUSTOMERS MODUL
+
+def display_customers():
+    print('display_customers() iz working!')
 
 #endregion
 
@@ -100,6 +110,14 @@ def main():
         # Ovisno o izboru meni_item pozvati odgovarajucu funkciju
         if menu_item == 0:
             return
+        elif menu_item == 1:
+            display_customers()
+            print()
+            input('Za nastavak pritisnite tipku ENTER! ')
+        elif menu_item == 2:
+            display_contacts()
+            print()
+            input('Za nastavak pritisnite tipku ENTER! ')
         else:
             print(menu_item)
             input()
