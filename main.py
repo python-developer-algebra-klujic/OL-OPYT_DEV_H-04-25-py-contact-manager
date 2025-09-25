@@ -61,6 +61,26 @@ def clear_display() -> None:
     os.system('cls')
     print('clear_display() is working')
 
+def main_menu() -> int:
+    while True:
+        # Ocisti ekran -> funkcija clear_display()
+        clear_display()
+
+        print('main_menu() is working.')
+        print('1. Test')
+        print('0. Exit')
+
+        meni_item = input('Upisite broj ispred funkcionalnosti koju zelite napraviti: ')
+
+        if meni_item.isdigit():
+            return int(meni_item)
+        else:
+            print('Neispravan unos! Pokusajte ponovno.')
+            input('Za novi izbor pritisnite tipku ENTER.')
+
+
+
+
 #endregion
 
 #region CONTACTS MODUL
@@ -73,12 +93,16 @@ def clear_display() -> None:
 
 
 def main():
-    # Ocisti ekran -> funkcija clear_display()
-    clear_display()
-    
-    # Prikazati izbornik -> funkcija main_menu()
+    while True:
+        # Prikazati izbornik -> funkcija main_menu()
+        menu_item = main_menu()
 
-    # Ovisno o izboru meni_item pozvati odgovarajucu funkciju
+        # Ovisno o izboru meni_item pozvati odgovarajucu funkciju
+        if menu_item == 0:
+            return
+        else:
+            print(menu_item)
+            input()
 
 #endregion
 
