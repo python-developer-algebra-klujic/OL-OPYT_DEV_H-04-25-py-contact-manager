@@ -59,8 +59,9 @@ customers = [
 #region GUI MODUL
 
 def clear_display() -> None:
-    os.system('cls')
+    os.system('cls') if os.name == 'nt' else os.system('clear')
     print('clear_display() is working')
+    
 
 def main_menu() -> int:
     while True:
