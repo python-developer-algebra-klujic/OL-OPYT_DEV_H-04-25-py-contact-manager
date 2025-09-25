@@ -53,13 +53,12 @@ customers = [
 
 
 #region FUNCTIONS
-
+def main():
+    print('Main function is working!')
 
 #endregion
 
 
 #region MAIN PROGRAM
-
-# TODO Glavna while petlja unutar main() funkcije
-
+main()
 #endregion
